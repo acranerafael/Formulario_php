@@ -1,4 +1,4 @@
-# Formulário em Laravel 6.0.*
+# Formulário de contato utilizando Laravel 6.0.*
 
 
 _Formulário de contato com envio de email e cadastro em banco de dados utilizando o framework PHP [Laravel 6.0](https://laravel.com/docs/6.x)._
