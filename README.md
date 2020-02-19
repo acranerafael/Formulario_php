@@ -1,12 +1,13 @@
 # Formulário em Laravel 6.0.*
 
 
-_Formulário de contato com envio de email e cadastro em banco de dados utilizando o framework PHP [Laravel 6.0](http://www.laravel.com)._
+_Formulário de contato com envio de email e cadastro em banco de dados utilizando o framework PHP [Laravel 6.0](https://laravel.com/docs/6.x)._
 
 
 ## Pré-requisitos
 - Laravel 6.0 instalado e traduzido;
 - Environment file (.env) previamente configurado com as conexões do seu banco de dados;
+- Composer instalado;
 - Conta de email com o serviço SMTP ativado.
 
 ## Etapas
@@ -49,9 +50,63 @@ Em seguida, substitua o arquivo `app/Http/Controllers/ContactController.php`
 
 
 ### Etapa 5: Criação e configuração das Views
-
+Execute o comando abaixo para instalar o pacote do Laravel para formulários
+```sh
+composer require laravelcollective/html
+```
 
 Copie o arquivo `resources/views/welcome.blade.php` ou edite o "index" da sua aplicação
 
+Copie o arquivo `email.blade.php` para o diretório `resources/views/`
 
-### Etapa 6: Configuração do SMTP no Environment file (.env)
+
+### Etapa 6: Configuração do SMTP no Environment file 
+Execute o comando abaixo para habilitar o uso do SMTP no Laravel
+```sh
+php artisan make:mail smtp
+```
+Em seguida, edite as especificações do seu servidor de SMTP no arquivo `.env`
+Por exemplo:
+```sh
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=digite_o_seu_email_aqui@gmail.com
+MAIL_PASSWORD=digite_o_seu_password_aqui
+MAIL_ENCRYPTION=tls
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
