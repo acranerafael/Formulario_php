@@ -20,7 +20,7 @@
         @endif
 
 {!! Form::open(['route'=>'contact.store']) !!}
-    {!! csrf_field() !!}
+    @csrf
 
     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
             {!! Form::label('Nome:') !!}
