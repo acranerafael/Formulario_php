@@ -67,7 +67,13 @@ composer require guzzlehttp/guzzle
 ```
 
 ### Etapa 7: Configuração do SMTP no Environment file 
-Execute o comando abaixo para habilitar o uso do SMTP no Laravel
+Para a utilização do SMTP Google será necessário adicionar uma camada extra de segurança, conhecida como autenticação de dois fatores.
+Para a configuração correta da autenticação, acesse os sites:
+
+* [Ativar a verificação em duas etapas](https://support.google.com/accounts/answer/185839).
+* [Fazer login usando senhas de app](https://support.google.com/accounts/answer/185833?hl=pt-BR).
+
+Após a configuração completa da autenticação, execute o comando abaixo para habilitar o uso do SMTP no Laravel
 ```sh
 php artisan make:mail smtp
 ```
@@ -78,7 +84,7 @@ MAIL_DRIVER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USERNAME=digite_o_seu_email_aqui@gmail.com
-MAIL_PASSWORD=digite_o_seu_password_aqui
+MAIL_PASSWORD=digite_o_seu_apppassword(token gerado pelo google)
 MAIL_ENCRYPTION=tls
 ```
 
