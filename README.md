@@ -16,6 +16,7 @@ _Formulário de contato com envio de email e cadastro em banco de dados utilizan
 * Configuração da Route;
 * Criação e configuração do Controller;
 * Criação e configuração das Views;
+* Instalação do Guzzle;
 * Configuração do SMTP no Environment file (.env)  ;
 
 ### Preparação
@@ -60,7 +61,12 @@ Copie o arquivo `resources/views/welcome.blade.php` ou edite o "index" da sua ap
 Copie o arquivo `email.blade.php` para o diretório `resources/views/`
 
 
-### Etapa 6: Configuração do SMTP no Environment file 
+### Etapa 6: Instalação do Guzzle (PHP stream handler)
+```sh
+composer require guzzlehttp/guzzle
+```
+
+### Etapa 7: Configuração do SMTP no Environment file 
 Execute o comando abaixo para habilitar o uso do SMTP no Laravel
 ```sh
 php artisan make:mail smtp
